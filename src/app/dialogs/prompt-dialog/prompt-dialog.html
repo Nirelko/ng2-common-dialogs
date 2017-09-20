@@ -2,9 +2,14 @@
     {{ title }}
 </h2>
 <md-dialog-content>
+  <div fxLayout="column">
     <span>{{ message }}</span>
+    <md-form-field>
+      <input mdInput [placeholder]="inputLabel" required [(ngModel)]="inputValue" />
+    </md-form-field>
+  </div>
 </md-dialog-content>
 <md-dialog-actions fxLayout="row" fxLayoutAlign="end center">
     <button md-raised-button md-dialog-close>{{ cancelButton }}</button>
-    <button md-raised-button [md-dialog-close]="true" color="primary">{{ yesButton }}</button>
+    <button md-raised-button [md-dialog-close]="inputValue" color="primary">{{ okButton }}</button>
 </md-dialog-actions>

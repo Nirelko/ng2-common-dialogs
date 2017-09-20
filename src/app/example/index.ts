@@ -3,6 +3,7 @@ import { MdDialog } from '@angular/material';
 
 import { ConfirmDialogComponent } from '../dialogs/confirm-dialog';
 import { AlertDialogComponent } from '../dialogs/alert-dialog';
+import { PromptDialogComponent } from '../dialogs/prompt-dialog';
 
 @Component({
   selector: 'example',
@@ -22,11 +23,24 @@ export class ExampleComponent {
       }
     })
   }
+
   showAlertDialog() : void {
     this.dialogService.open(AlertDialogComponent, {
       data: {
         title: 'Nice One',
         message: 'You just opened an alert dialog',
+        okButton: 'Yay!',
+      }
+    })
+  }
+
+  showPromptDialog() : void {
+    this.dialogService.open(PromptDialogComponent, {
+      data: {
+        title: 'Personality Test',
+        message: 'What is your favorite dish?',
+        inputLabel: 'Dish Name',
+        cancelButton: 'No',
         okButton: 'Yay!',
       }
     })
