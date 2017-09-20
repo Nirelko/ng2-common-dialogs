@@ -1,16 +1,28 @@
-import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MdDialogModule, MdButtonModule } from '@angular/material';
+import { FlexLayoutModule } from "@angular/flex-layout";
 
-import { AppComponent } from './app.component';
+import { ExampleComponent } from './example';
+import { ConfirmDialogComponent } from './dialogs/confirm-dialog'
 
 @NgModule({
   declarations: [
-    AppComponent
+    ExampleComponent,
+    ConfirmDialogComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    BrowserAnimationsModule,
+    MdDialogModule,
+    MdButtonModule,
+    FlexLayoutModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  entryComponents: [
+    ConfirmDialogComponent
+  ],
+  bootstrap: [ExampleComponent]
 })
-export class AppModule { }
+export class Ng2CommonDialogsModule { }

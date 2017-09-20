@@ -1,0 +1,14 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$app-primary: mat-palette($mat-blue);
+$app-accent:  mat-palette($mat-amber);
+
+@include angular-material-theme(mat-light-theme($app-primary, $app-accent));
+
+html, body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+}
