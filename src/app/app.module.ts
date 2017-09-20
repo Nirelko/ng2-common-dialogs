@@ -5,12 +5,14 @@ import { MdDialogModule, MdButtonModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
 import { ExampleComponent } from './example';
-import { ConfirmDialogComponent } from './dialogs/confirm-dialog'
+import { ConfirmDialogComponent } from './dialogs/confirm-dialog';
+import { AlertDialogComponent } from './dialogs/alert-dialog';
 
 @NgModule({
   declarations: [
     ExampleComponent,
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    AlertDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -21,7 +23,8 @@ import { ConfirmDialogComponent } from './dialogs/confirm-dialog'
   ],
   providers: [],
   entryComponents: [
-    ConfirmDialogComponent
+    ConfirmDialogComponent,
+    AlertDialogComponent
   ],
   bootstrap: [ExampleComponent]
 })

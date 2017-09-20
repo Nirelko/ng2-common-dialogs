@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MdDialog } from '@angular/material';
 
 import { ConfirmDialogComponent } from '../dialogs/confirm-dialog';
+import { AlertDialogComponent } from '../dialogs/alert-dialog';
 
 @Component({
   selector: 'example',
@@ -18,6 +19,15 @@ export class ExampleComponent {
         message: 'Are you sure you want to do this?',
         cancelButton: 'No Way!',
         yesButton: 'Absolutely',
+      }
+    })
+  }
+  showAlertDialog() : void {
+    this.dialogService.open(AlertDialogComponent, {
+      data: {
+        title: 'Nice One',
+        message: 'You just opened an alert dialog',
+        okButton: 'Yay!',
       }
     })
   }
