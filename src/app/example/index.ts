@@ -4,6 +4,7 @@ import { MdDialog } from '@angular/material';
 import { ConfirmDialogComponent } from '../dialogs/confirm-dialog';
 import { AlertDialogComponent } from '../dialogs/alert-dialog';
 import { PromptDialogComponent } from '../dialogs/prompt-dialog';
+import { LoadingDialogComponent } from '../dialogs/loading-dialog';
 
 @Component({
   selector: 'example',
@@ -41,7 +42,20 @@ export class ExampleComponent {
         message: 'What is your favorite dish?',
         inputLabel: 'Dish Name',
         cancelButton: 'No',
-        okButton: 'Yay!',
+        okButton: 'Choose',
+      }
+    })
+  }
+
+  showLoadingDialog() : void {
+    this.dialogService.open(LoadingDialogComponent, {
+      data: {
+        title: 'Be patient...',
+        promise: new Promise(resolve => {
+          setTimeout(() => {
+            resolve();
+          }, 2000)
+        })
       }
     })
   }
