@@ -24,6 +24,17 @@
     "url": "https://github.com/Nirelko/ng2-common-dialogs/issues"
   },
   "license": "MIT",
+  "peerDependencies": {
+    "core-js": "^2.4.1",
+    "rxjs": "^5.4.2",
+    "zone.js": "^0.8.14",
+    "@angular/core": "^4.2.4",
+    "@angular/common": "^4.2.4",
+    "@angular/forms": "^4.2.4",
+    "@angular/platform-browser": "^4.2.4",
+    "@angular/cdk": "^2.0.0-beta.10",
+    "@angular/material": "^2.0.0-beta.10"
+  },
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -33,7 +44,8 @@
     "transpile": "ngc",
     "package": "rollup -c",
     "minify": "uglifyjs dist/bundles/ng.2.common.dialogs.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng.2.common.dialogs.umd.min.js",
-    "build": "npm run transpile && npm run package && npm run minify"
+    "copy-files": "copyfiles package.json README.md dist",
+    "build": "npm run transpile && npm run package && npm run minify && npm run copy-files"
   },
   "dependencies": {
     "core-js": "^2.4.1",
@@ -60,6 +72,7 @@
     "@types/jasminewd2": "~2.0.2",
     "@types/node": "~6.0.60",
     "codelyzer": "~3.1.1",
+    "copyfiles": "^1.2.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
     "karma": "~1.7.0",
