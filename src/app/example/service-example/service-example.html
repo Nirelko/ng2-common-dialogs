@@ -1,0 +1,18 @@
+<div fxLayout="row">
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <button color="primary" md-raised-button (click)="showAlertDialog()">Show Alert Dialog</button>
+    <span>{{ alertText }}</span>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <button color="primary" md-raised-button (click)="showConfirmDialog()">Show Confirm Dialog</button>
+    <span>{{ confirmText }}</span>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <button color="primary" md-raised-button (click)="showPromptDialog()">Show Prompt Dialog</button>
+    <span>{{ promptText }}</span>
+  </div>
+  <div fxLayout="column" fxLayoutAlign="start center">
+    <button color="primary" md-raised-button (click)="showLoadingDialog()">Show Loading Dialog</button>
+    <span>{{ loadingText }}</span>
+  </div>
+</div>
