@@ -37,8 +37,8 @@ import { ExampleComponent } from './example';
     MdButtonModule,
     MdInputModule,
     MdProgressSpinnerModule,
+    FormsModule,
     FlexLayoutModule,
-    FormsModule
   ],
   providers: [
     CommonDialogService

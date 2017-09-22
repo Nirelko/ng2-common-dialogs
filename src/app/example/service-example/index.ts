@@ -1,9 +1,5 @@
 import { Component } from '@angular/core';
 
-import { ConfirmDialogComponent } from '../../dialogs/confirm-dialog';
-import { AlertDialogComponent } from '../../dialogs/alert-dialog';
-import { PromptDialogComponent } from '../../dialogs/prompt-dialog';
-import { LoadingDialogComponent } from '../../dialogs/loading-dialog';
 import { CommonDialogService } from '../../services/common-dialog.service';
 
 @Component({
