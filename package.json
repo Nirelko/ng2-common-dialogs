@@ -1,8 +1,8 @@
 {
-  "name": "ng2-common-dialogs",
+  "name": "ngm-common-dialogs",
   "version": "1.0.1",
   "description": "A module which provides some common dialogs and a simple to use service for angular material and angular 4",
-  "main": "bundles/ng.2.common.dialogs.umd.js",
+  "main": "bundles/ngm.common.dialogs.umd.js",
   "module": "index.js",
   "typings": "index.d.ts",
   "keywords": [
@@ -17,11 +17,11 @@
   "author": "Nirel Yehoyada",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Nirelko/ng2-common-dialogs"
+    "url": "https://github.com/Nirelko/ngm-common-dialogs"
   },
-  "homepage": "https://github.com/Nirelko/ng2-common-dialogs",
+  "homepage": "https://github.com/Nirelko/ngm-common-dialogs",
   "bugs": {
-    "url": "https://github.com/Nirelko/ng2-common-dialogs/issues"
+    "url": "https://github.com/Nirelko/ngm-common-dialogs/issues"
   },
   "license": "MIT",
   "peerDependencies": {
@@ -44,7 +44,7 @@
     "e2e": "ng e2e",
     "transpile": "ngc",
     "package": "rollup -c",
-    "minify": "uglifyjs dist/bundles/ng.2.common.dialogs.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ng.2.common.dialogs.umd.min.js",
+    "minify": "uglifyjs dist/bundles/ngm.common.dialogs.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ngm.common.dialogs.umd.min.js",
     "copy-files": "copyfiles package.json README.md dist",
     "build": "npm run transpile && npm run package && npm run minify && npm run copy-files"
   },

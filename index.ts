@@ -1,4 +1,4 @@
-export { Ng2CommonDialogsModule }    from './src/app/app.module';
+export { NgmCommonDialogsModule }    from './src/app/app.module';
 export { AlertDialogComponent } from './src/app/dialogs/alert-dialog';
 export { AlertDialogData } from './src/app/dialogs/alert-dialog/alert-dialog-data';
 export { ConfirmDialogComponent } from './src/app/dialogs/confirm-dialog';

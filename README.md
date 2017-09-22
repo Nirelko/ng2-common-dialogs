@@ -1,7 +1,6 @@
-# ng2-common-dialogs
+# ngm-common-dialogs
 ### Provides common dialogs components and a simple to use service for angular material
-After developing with angularjs material and got used to the simple use of the provided common used dialogs I thought it will be nice to have them also in the new angular material. 
-So I built the dialogs which were provided than and an extra dialog which I find really necessary and fun to use.
+After developing with angularjs material and got used to the simple use of the provided dialogs I thought it will be nice to have them also in the new angular material, so I build the dialogs which were provided then and an extra dialog which I find really necessary and fun to use.
 
 ### The Dialogs
 * Alert Dialog
@@ -20,7 +19,7 @@ Angular 4.X.X and Angular Material 2.X.X
 
 ## Installation
 ```sh
-npm i --save ng2-common-dialogs
+npm i --save ngm-common-dialogs
 ```
 In your `app.module.ts` you need to import the package, don't forget to import all its dependencies before.
 
@@ -28,7 +27,7 @@ In your `app.module.ts` you need to import the package, don't forget to import a
 import { FormsModule } from '@angular/forms';
 import { MdDialogModule, MdButtonModule, MdInputModule, MdProgressSpinnerModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
-import { Ng2CommonDialogsModule } from 'ng2-common-dialogs'
+import { NgmCommonDialogsModule } from 'ngm-common-dialogs'
 ```
 ```ts
 @NgModule({
@@ -39,7 +38,7 @@ import { Ng2CommonDialogsModule } from 'ng2-common-dialogs'
   MdInputModule,
   MdProgressSpinnerModule,
   FlexLayoutModule
-  Ng2CommonDialogsModule
+  NgmCommonDialogsModule
   ],
   ...
 })
@@ -51,7 +50,7 @@ export class AppModule {
 ### if you only want to use the the components without the service
 
 ```ts
-import { Ng2CommonDialogsModule, AlertDialogComponent, ConfirmDialogComponent, PromptDialogComponent, LoadingDialogComponent } from 'ng2-common-dialogs';
+import { NgmCommonDialogsModule, AlertDialogComponent, ConfirmDialogComponent, PromptDialogComponent, LoadingDialogComponent } from 'ngm-common-dialogs';
 ```
 ```ts
 @NgModule({
@@ -83,7 +82,7 @@ import { Ng2CommonDialogsModule, AlertDialogComponent, ConfirmDialogComponent, P
  ```ts
  import { Component } from '@angular/core';
 
-import { CommonDialogService } from 'ng2-common-dialogs';
+import { CommonDialogService } from 'ngm-common-dialogs';
 
 @Component({
   selector: 'service-example',

@@ -2,10 +2,10 @@ import localResolve from 'rollup-plugin-local-resolve';
 
 export default {
   entry: 'dist/index.js',
-  dest: 'dist/bundles/ng.2.common.dialogs.umd.js',
+  dest: 'dist/bundles/ngm.common.dialogs.umd.js',
   sourceMap: false,
   format: 'umd',
-  moduleName: 'ng.ng2.2.common.dialogs.module',
+  moduleName: 'ng.ngm.common.dialogs.module',
   globals: {
     '@angular/core': 'ng.core',
     'rxjs/Observable': 'Rx',

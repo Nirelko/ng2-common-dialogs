@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('ng2-common-dialogs App', () => {
+describe('ngm-common-dialogs App', () => {
   let page: AppPage;
 
   beforeEach(() => {

@@ -51,4 +51,4 @@ import { ExampleComponent } from './example';
     LoadingDialogComponent
   ]
 })
-export class Ng2CommonDialogsModule { }
+export class NgmCommonDialogsModule { }
