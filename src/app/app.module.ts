@@ -5,24 +5,24 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdDialogModule, MdButtonModule, MdInputModule, MdProgressSpinnerModule } from '@angular/material';
 import { FlexLayoutModule } from "@angular/flex-layout";
 
-import { ExampleComponent } from './example';
-import { ConfirmDialogComponent } from './dialogs/confirm-dialog';
 import { AlertDialogComponent } from './dialogs/alert-dialog';
+import { ConfirmDialogComponent } from './dialogs/confirm-dialog';
 import { PromptDialogComponent } from './dialogs/prompt-dialog';
 import { LoadingDialogComponent } from './dialogs/loading-dialog';
 import { CommonDialogService } from './services/common-dialog.service';
 import { ComponentsExampleComponent } from './example/components-example';
 import { ServiceExampleComponent } from './example/service-example/index';
+import { ExampleComponent } from './example';
 
 @NgModule({
   declarations: [
-    ExampleComponent,
     ConfirmDialogComponent,
     AlertDialogComponent,
     PromptDialogComponent,
     LoadingDialogComponent,
     ComponentsExampleComponent,
-    ServiceExampleComponent
+    ServiceExampleComponent,
+    ExampleComponent
   ],
   entryComponents: [
     ConfirmDialogComponent,
@@ -48,8 +48,7 @@ import { ServiceExampleComponent } from './example/service-example/index';
     ConfirmDialogComponent,
     AlertDialogComponent,
     PromptDialogComponent,
-    LoadingDialogComponent,
-    CommonDialogService
+    LoadingDialogComponent
   ]
 })
 export class Ng2CommonDialogsModule { }

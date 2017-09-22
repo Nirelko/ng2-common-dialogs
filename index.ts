@@ -1,0 +1,10 @@
+export { Ng2CommonDialogsModule }    from './src/app/app.module';
+export { AlertDialogComponent } from './src/app/dialogs/alert-dialog';
+export { AlertDialogData } from './src/app/dialogs/alert-dialog/alert-dialog-data';
+export { ConfirmDialogComponent } from './src/app/dialogs/confirm-dialog';
+export { ConfirmDialogData } from './src/app/dialogs/confirm-dialog/confirm.dialog.data';
+export { PromptDialogComponent } from './src/app/dialogs/prompt-dialog';
+export { PromptDialogData } from './src/app/dialogs/prompt-dialog/prompt-dialog-data';
+export { LoadingDialogComponent } from './src/app/dialogs/loading-dialog';
+export { LoadingDialogData } from './src/app/dialogs/loading-dialog/loading-dialog-data';
+export { CommonDialogService } from './src/app/services/common-dialog.service';

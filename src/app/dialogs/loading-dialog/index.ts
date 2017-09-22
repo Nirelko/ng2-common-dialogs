@@ -1,15 +1,17 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MD_DIALOG_DATA, MdDialogRef } from '@angular/material';
 
+import { LoadingDialogData } from './loading-dialog-data';
+
 @Component({
   selector: 'loading-dialog',
   templateUrl: './loading-dialog.html',
 })
 export class LoadingDialogComponent implements OnInit {
   title: string;
-  promise;
+  promise: Promise<any>;
   
-  constructor(@Inject(MD_DIALOG_DATA) data, private dialogRef: MdDialogRef<LoadingDialogComponent>) {
+  constructor(@Inject(MD_DIALOG_DATA) data: LoadingDialogData, private dialogRef: MdDialogRef<LoadingDialogComponent>) {
     const { promise, title = 'Loading...' } = data;
     
     this.title = title;
