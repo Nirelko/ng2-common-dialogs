@@ -1,10 +1,6 @@
 import { Component } from '@angular/core';
 import { MdDialog } from '@angular/material';
-
-import { ConfirmDialogComponent } from '../../dialogs/confirm-dialog';
-import { AlertDialogComponent } from '../../dialogs/alert-dialog';
-import { PromptDialogComponent } from '../../dialogs/prompt-dialog';
-import { LoadingDialogComponent } from '../../dialogs/loading-dialog';
+import { ConfirmDialogComponent, AlertDialogComponent, PromptDialogComponent, LoadingDialogComponent } from 'ngm-common-dialogs';
 
 @Component({
   selector: 'components-example',

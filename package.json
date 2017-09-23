@@ -32,7 +32,6 @@
     "@angular/common": "^4.2.4",
     "@angular/forms": "^4.2.4",
     "@angular/platform-browser": "^4.2.4",
-    "@angular/flex-layout": "^2.0.0-beta.9",
     "@angular/cdk": "^2.0.0-beta.10",
     "@angular/material": "^2.0.0-beta.10"
   },
@@ -42,11 +41,12 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "transpile": "ngc",
+    "transpile": "node_modules/.bin/ngc",
+    "clean": "rimraf dist",
     "package": "rollup -c",
-    "minify": "uglifyjs dist/bundles/ngm.common.dialogs.umd.js --screw-ie8 --compress --mangle --comments --output dist/bundles/ngm.common.dialogs.umd.min.js",
+    "minify": "uglifyjs dist/ngm-common-dialogs.umd.js --screw-ie8 --compress --mangle --comments --output dist/ngm-common-dialogs.umd.min.js",
     "copy-files": "copyfiles package.json README.md dist",
-    "build": "npm run transpile && npm run package && npm run minify && npm run copy-files"
+    "build": "npm run clean && npm run package && npm run transpile && npm run minify && npm run copy-files"
   },
   "dependencies": {
     "core-js": "^2.4.1",
@@ -60,7 +60,6 @@
     "@angular/material": "^2.0.0-beta.10",
     "@angular/animations": "^4.2.4",
     "@angular/http": "^4.2.4",
-    "@angular/flex-layout": "^2.0.0-beta.9",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4"
   },
@@ -76,8 +75,14 @@
     "copyfiles": "^1.2.0",
     "jasmine-core": "~2.6.2",
     "jasmine-spec-reporter": "~4.1.0",
+    "node-sass": "^4.5.3",
+    "rimraf": "^2.6.2",
     "rollup": "^0.50.0",
-    "rollup-plugin-local-resolve": "^1.0.7",
+    "rollup-plugin-alias": "^1.3.1",
+    "rollup-plugin-angular": "^0.5.3",
+    "rollup-plugin-commonjs": "^8.2.1",
+    "rollup-plugin-node-resolve": "^3.0.0",
+    "rollup-plugin-typescript": "^0.8.1",
     "ts-node": "~3.2.0",
     "tslint": "~5.3.2",
     "typescript": "^2.3.4",

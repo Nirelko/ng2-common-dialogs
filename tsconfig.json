@@ -1,37 +1,39 @@
 {
   "compileOnSave": false,
   "compilerOptions": {
-    "outDir": "dist",
-    "sourceMap": true,
-    "declaration": true,
-    "moduleResolution": "node",
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "target": "es5",
-    "typeRoots": [
-      "node_modules/@types"
-    ],
-    "lib": [
-      "es2017",
-      "dom"
-    ],
     "baseUrl": ".",
+    "rootDir": ".",
+    "inlineSources": true,
+    "skipLibCheck": true,
     "stripInternal": true,
     "strictNullChecks": true,
     "noImplicitAny": true,
+    "target": "es5",
     "module": "es2015",
+    "sourceMap": true,
+    "moduleResolution": "node",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "declaration": true,
+    "outDir": "./dist",
+    "lib": [
+      "es2015",
+      "dom"
+    ],
     "paths": {
       "@angular/core": ["node_modules/@angular/core"],
+      "@angular/common": ["node_modules/@angular/common"],
+      "@angular/forms": ["node_modules/@angular/forms"],
+      "@angular/platform-browser/animations": ["node_modules/@angular/platform-browser/animations"],
+      "@angular/material": ["node_modules/@angular/material"],
       "rxjs/*": ["node_modules/rxjs/*"]
-    },
-    "rootDir": ".",
-    "inlineSources": true,
-    "skipLibCheck": true
+    }
   },
   "files": [
-    "index.ts"
+    "./index.ts"
   ],
   "angularCompilerOptions": {
-    "strictMetadataEmit": true
+    "genDir": "dist",
+    "skipTemplateCodegen": true
   }
 }

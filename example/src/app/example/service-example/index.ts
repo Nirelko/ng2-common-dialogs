@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-
-import { CommonDialogService } from '../../services/common-dialog.service';
+import { CommonDialogService } from 'ngm-common-dialogs';
 
 @Component({
   selector: 'service-example',
@@ -43,7 +42,7 @@ export class ServiceExampleComponent {
       cancelButton: 'No',
       okButton: 'Choose',
     })
-    .then(dishName => this.promptText = dishName);
+    .then((dishName: string) => this.promptText = dishName);
   }
   
   showLoadingDialog() {
