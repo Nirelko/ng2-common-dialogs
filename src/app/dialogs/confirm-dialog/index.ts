@@ -29,7 +29,7 @@ export class ConfirmDialogComponent {
     yesButton: string;
 
     constructor(@Inject(MD_DIALOG_DATA) data : ConfirmDialogData) {
-        const { title, message, cancelButton = 'cancel', yesButton = 'yes' } = data;
+        const { title, message, cancelButton = 'Cancel', yesButton = 'Yes' } = data;
 
         this.title = title;
         this.message = message;

@@ -15,7 +15,7 @@ import { LoadingDialogData } from '../dialogs/loading-dialog/loading-dialog-data
 export class CommonDialogService {
   constructor(private dialogService: MdDialog) { }
   
-  showAlert({ title , message, okButton = 'ok'}: AlertDialogData) {
+  showAlert({ title , message, okButton = 'Ok'}: AlertDialogData) {
     return this.dialogService.open(AlertDialogComponent, {
       data: {
         title,
@@ -25,7 +25,7 @@ export class CommonDialogService {
     }).afterClosed().toPromise();
   }
   
-  showConfirm ({ title , message, cancelButton = 'cancel', yesButton = 'yes' }: ConfirmDialogData) {
+  showConfirm ({ title , message, cancelButton = 'Cancel', yesButton = 'Yes' }: ConfirmDialogData) {
     return this.dialogService.open(ConfirmDialogComponent, {
       data: {
         title,
@@ -37,7 +37,7 @@ export class CommonDialogService {
     .then(result => result ? Promise.resolve() : Promise.reject(false));
   }
   
-  showPrompt ({ title, message, inputLabel, cancelButton = 'cancel', okButton = 'ok' }: PromptDialogData) {
+  showPrompt ({ title, message, inputLabel, cancelButton = 'Cancel', okButton = 'Ok' }: PromptDialogData) {
     return this.dialogService.open(PromptDialogComponent, {
       data: {
         title,

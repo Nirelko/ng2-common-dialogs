@@ -27,7 +27,7 @@ export class AlertDialogComponent {
     okButton: string;
 
     constructor(@Inject(MD_DIALOG_DATA) data: AlertDialogData) {
-        const { title, message, okButton = 'ok' } = data;
+        const { title, message, okButton = 'Ok' } = data;
 
         this.title = title;
         this.message = message;

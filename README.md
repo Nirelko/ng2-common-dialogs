@@ -22,7 +22,7 @@ Angular 4.X.X and Angular Material 2.X.X
 npm i --save ngm-common-dialogs
 ```
 In your `app.module.ts` you need to import the package, don't forget to import all its dependencies before.
-
+ 
 ```ts
 import { FormsModule } from '@angular/forms';
 import { MdDialogModule, MdButtonModule, MdInputModule, MdProgressSpinnerModule } from '@angular/material';
@@ -47,34 +47,6 @@ export class AppModule {
 }
 ```
 
-### if you only want to use the the components without the service
-
-```ts
-import { NgmCommonDialogsModule, AlertDialogComponent, ConfirmDialogComponent, PromptDialogComponent, LoadingDialogComponent } from 'ngm-common-dialogs';
-```
-```ts
-@NgModule({
-  // Import all the items that were imported in the former exmaple
-  ...
-  declarations: [
-    ...
-    ConfirmDialogComponent,
-    AlertDialogComponent,
-    PromptDialogComponent,
-    LoadingDialogComponent
-  ],
-  entryComponents: [
-    ...
-    ConfirmDialogComponent,
-    AlertDialogComponent,
-    PromptDialogComponent,
-    LoadingDialogComponent
-  ],
-  ...
-```
-
- The reason you add them also as `entryComponents` is because you want them to have a *component factory*.
- 
  ## Usage
  ### Common Dialog Service
  The service is very simple to use, all you need to do is to inject it to your component and than call the right show dialog function. All the functions returns a simple ES6 `Promise`.
@@ -166,7 +138,6 @@ export class ServiceExampleComponent {
 - `return` an ES6 `Promise` with `result` which is the result of the given promise. If the given promise rejected the promise will also reject (in that case you need to use catch instead of then)
  
 ### Native Components
-For these components you must follow the second stage of the installation in order angular to recognize the components and the ability to open a dialog of them.
 When you open the dialog you must supply the right component's data structure, each component has it own `class` that represents his data structure.
 
 ### `AlertDialogComponent`
@@ -198,3 +169,27 @@ Resolves the given `promise`, take the *result*, wrap it with `Promise.resolve()
 ### `LoadingDialogData`
 - `title`: The title
 - `promise`: The `Promise` that be resolved while the loading dialog will be shown
+ 
+## Example Of Component Usage
+```ts
+import { AlertDialogComponent } from 'ngm-common-dialogs';
+
+@Component({
+  selector: 'components-example',
+  templateUrl: './components-example.html',
+  styleUrls: ['./components-example.scss']
+})
+export class ComponentsExampleComponent {
+  constructor(private dialogService: MdDialog) { }
+  
+      showAlertDialog() : void {
+        this.dialogService.open(AlertDialogComponent, {
+          data: { // This data needs to be in the AlertDialogData structure
+            title: 'Nice One',
+            message: 'You just opened an alert dialog',
+            okButton: 'Yay!',
+          }
+        });
+      }
+  }
+```

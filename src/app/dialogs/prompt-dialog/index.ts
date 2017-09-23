@@ -18,7 +18,7 @@ import { PromptDialogData } from './prompt-dialog-data';
             </md-dialog-content>
             <md-dialog-actions class="actions-container">
                 <button md-raised-button md-dialog-close>{{ cancelButton }}</button>
-                <button md-raised-button [md-dialog-close]="inputValue" color="primary">{{ okButton }}</button>
+                <button md-raised-button [md-dialog-close]="inputValue" color="primary" [disabled]="!inputValue">{{ okButton }}</button>
             </md-dialog-actions>`,
   styles: [`.content-container {
               display: flex;
@@ -41,7 +41,7 @@ export class PromptDialogComponent {
     inputValue: string;
 
     constructor(@Inject(MD_DIALOG_DATA) data: PromptDialogData) {
-        const { title, message, inputLabel, cancelButton = 'cancel', okButton = 'ok' } = data;
+        const { title, message, inputLabel, cancelButton = 'Cancel', okButton = 'Ok' } = data;
 
         this.title = title;
         this.message = message;
