@@ -15,7 +15,7 @@ After developing with angularjs material and got used to the simple use of the p
 Angular 4.X.X and Angular Material 2.X.X
 
 ## Demo
-
+https://embed.plnkr.co/I6B2JZ/
 
 ## Installation
 ```sh

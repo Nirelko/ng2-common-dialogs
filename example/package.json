@@ -35,7 +35,7 @@
     "@angular/flex-layout": "^2.0.0-beta.9",
     "@angular/platform-browser-dynamic": "^4.2.4",
     "@angular/router": "^4.2.4",
-    "ngm-common-dialogs": "^1.0.3"
+    "ngm-common-dialogs": "^1.0.4"
   },
   "devDependencies": {
     "@angular/cli": "1.4.2",
