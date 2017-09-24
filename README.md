@@ -26,8 +26,7 @@ In your `app.module.ts` you need to import the package, don't forget to import a
 ```ts
 import { FormsModule } from '@angular/forms';
 import { MdDialogModule, MdButtonModule, MdInputModule, MdProgressSpinnerModule } from '@angular/material';
-import { FlexLayoutModule } from "@angular/flex-layout";
-import { NgmCommonDialogsModule } from 'ngm-common-dialogs'
+import { NgmCommonDialogsModule } from 'ngm-common-dialogs';
 ```
 ```ts
 @NgModule({
@@ -37,7 +36,6 @@ import { NgmCommonDialogsModule } from 'ngm-common-dialogs'
   MdButtonModule,
   MdInputModule,
   MdProgressSpinnerModule,
-  FlexLayoutModule
   NgmCommonDialogsModule
   ],
   ...

@@ -1,6 +1,6 @@
 {
   "name": "ngm-common-dialogs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "A module which provides some common dialogs and a simple to use service for angular material and angular 4",
   "main": "bundles/ngm.common.dialogs.umd.js",
   "module": "index.js",

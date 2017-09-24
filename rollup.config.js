@@ -10,8 +10,19 @@ export default {
   sourceMap: true,
   format: 'umd',
   moduleName: 'ngm-common-dialogs',
+  external: [
+    '@angular/core',
+    '@angular/common',
+    '@angular/forms',
+    '@angular/platform-browser/animations',
+    '@angular/material'
+  ],
   globals: {
     '@angular/core': 'ng.core',
+    '@angular/common': 'ng.common',
+    '@angular/forms': 'ng.forms',
+    '@angular/platform-browser/animations': 'ng.platform-browser',
+    '@angular/material': 'ng.material',
     'rxjs/Observable': 'Rx',
     'rxjs/add/observable/toPromise': 'Rx.Observable',
   },
